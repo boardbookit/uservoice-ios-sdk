@@ -22,7 +22,5 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
-	<key>UIUserInterfaceStyle</key>
-	<string>1</string>
 </dict>
 </plist>
