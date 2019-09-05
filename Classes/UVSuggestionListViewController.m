@@ -19,6 +19,7 @@
 #import "UVBabayaga.h"
 #import "UVPostIdeaViewController.h"
 #import "UVSuggestionSearchResultsController.h"
+#import "UIColor+UVColors.h"
 
 #define SUGGESTIONS_PAGE_SIZE 10
 #define UV_SEARCH_TEXTBAR 1
