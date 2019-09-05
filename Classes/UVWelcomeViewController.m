@@ -45,6 +45,15 @@
     return [UVSession currentSession].config.topicId || [[UVSession currentSession].topics count] == 0;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    if (@available(iOS 13.0, *)) {
+        self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
+    }
+}
+
 #pragma mark ===== table cells =====
 
 - (void)initCellForContact:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {

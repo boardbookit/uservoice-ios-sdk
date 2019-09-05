@@ -187,7 +187,7 @@
     UIView *power = [UIView new];
     power.frame = CGRectMake(0, 0, 0, 80);
     UILabel *uv = [UILabel new];
-    uv.text = NSLocalizedStringFromTableInBundle(@"Powered by UserVoice", @"UserVoice", [UserVoice bundle], nil);
+    uv.text = NSLocalizedStringFromTableInBundle(@"Powered! by UserVoice", @"UserVoice", [UserVoice bundle], nil);
     uv.font = [UIFont systemFontOfSize:13];
     uv.textColor = [UIColor grayColor];
     uv.backgroundColor = [UIColor clearColor];
