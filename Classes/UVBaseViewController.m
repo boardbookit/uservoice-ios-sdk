@@ -60,9 +60,9 @@
 {
     [super viewDidLoad];
     
-    if (@available(iOS 13.0, *)) {
-        self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
-    }
+//    if (@available(iOS 13.0, *)) {
+//        self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
+//    }
 }
 
 - (CGRect)contentFrame {
