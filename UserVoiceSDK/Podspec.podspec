@@ -13,8 +13,7 @@
     "ios": "6.0"
   },
   "source": {
-    "git": "https://github.com/boardbookit/uservoice-ios-sdk.git",
-    "branch": "master"
+    "git": "https://github.com/boardbookit/uservoice-ios-sdk.git"
   },
   "source_files": [
     "Classes/*.{h,m}",
