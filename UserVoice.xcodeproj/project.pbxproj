@@ -308,7 +308,6 @@
 		80B5291D13A16A2F008709D2 /* UVCustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVCustomField.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* UserVoice_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserVoice_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AB1E1BFF23213BAB00529689 /* Podspec.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podspec.podspec; sourceTree = "<group>"; };
 		AC04F4F2109A3D4A00551F2D /* UVSuggestionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVSuggestionDetailsViewController.h; sourceTree = "<group>"; };
 		AC04F4F3109A3D4A00551F2D /* UVSuggestionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVSuggestionDetailsViewController.m; sourceTree = "<group>"; };
 		AC1B16C910D7F586002B03F7 /* UVWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVWelcomeViewController.h; sourceTree = "<group>"; };
@@ -779,7 +778,6 @@
 			children = (
 				D36839F61C77464C0036064E /* UserVoiceSDK.h */,
 				D36839F81C77464C0036064E /* Info.plist */,
-				AB1E1BFF23213BAB00529689 /* Podspec.podspec */,
 			);
 			path = UserVoiceSDK;
 			sourceTree = "<group>";
