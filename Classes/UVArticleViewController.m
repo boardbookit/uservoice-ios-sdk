@@ -14,6 +14,7 @@
 #import "UVBabayaga.h"
 #import "UVDeflection.h"
 #import "UVUtils.h"
+#import "UIColor+UVColors.h"
 
 @implementation UVArticleViewController {
     UILabel *_footerLabel;
@@ -38,7 +39,7 @@
         linkColor = @"default";
     }
     NSString *html = [NSString stringWithFormat:@"<html><head><meta name=\"viewport\" content=\"user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0\"/><link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.uservoice.com/stylesheets/vendor/typeset.css\"/><style>a { color: %@; } img { max-width: 100%%; width: auto; height: auto; }</style></head><body class=\"typeset\" style=\"font-family: HelveticaNeue; margin: 1em; font-size: 15px\"><h5 style='font-weight: normal; color: #999; font-size: 13px'>%@</h5><h3 style='margin-top: 10px; margin-bottom: 20px; font-size: 18px; font-family: HelveticaNeue-Medium; font-weight: normal; line-height: 1.3'>%@</h3>%@</body></html>", linkColor, section, _article.question, _article.answerHTML];
-    _webView.backgroundColor = [UIColor whiteColor];
+    _webView.backgroundColor = [UIColor backgroundColor];
     for (UIView* shadowView in [[_webView scrollView] subviews]) {
         if ([shadowView isKindOfClass:[UIImageView class]]) {
             [shadowView setHidden:YES];
@@ -49,26 +50,26 @@
     _webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, footerHeight, 0);
 
     UIView *footer = [UIView new];
-    footer.backgroundColor = [UIColor colorWithRed:0.97f green:0.97f blue:0.97f alpha:1.0f];
+    footer.backgroundColor = [UIColor reallyLightGray];
     UIView *bg = [UIView new];
     bg.backgroundColor = footer.backgroundColor;
     bg.translatesAutoresizingMaskIntoConstraints = NO;
     UIView *border = [UIView new];
-    border.backgroundColor = [UIColor colorWithRed:0.85f green:0.85f blue:0.85f alpha:1.0f];
+    border.backgroundColor = [UIColor mediumGray];
     UILabel *label = [UILabel new];
     label.text = NSLocalizedStringFromTableInBundle(@"Was this article helpful?", @"UserVoice", [UserVoice bundle], nil);
     label.font = [UIFont systemFontOfSize:13];
-    label.textColor = [UIColor colorWithRed:0.41f green:0.42f blue:0.43f alpha:1.0f];
+    label.textColor = [UIColor darkGray];
     label.backgroundColor = [UIColor clearColor];
     _footerLabel = label;
     UIButton *yes = [UIButton new];
     [yes setTitle:NSLocalizedStringFromTableInBundle(@"Yes!", @"UserVoice", [UserVoice bundle], nil) forState:UIControlStateNormal];
-    [yes setTitleColor:(IOS7 ? yes.tintColor : [UIColor colorWithRed:0.0 green:0.5 blue:1.0 alpha:1.0]) forState:UIControlStateNormal];
+    [yes setTitleColor:([UIColor green]) forState:UIControlStateNormal];
     [yes addTarget:self action:@selector(yesButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     _yes = yes;
     UIButton *no = [UIButton new];
     [no setTitle:NSLocalizedStringFromTableInBundle(@"No", @"UserVoice", [UserVoice bundle], nil) forState:UIControlStateNormal];
-    [no setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [no setTitleColor:[UIColor secondaryText] forState:UIControlStateNormal];
     [no addTarget:self action:@selector(noButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     _no = no;
     NSArray *constraints = @[

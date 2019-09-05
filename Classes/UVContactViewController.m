@@ -18,6 +18,7 @@
 #import "UVCustomField.h"
 #import "UVBabayaga.h"
 #import "UVTextWithFieldsView.h"
+#import "UIColor+UVColors.h"
 
 @implementation UVContactViewController {
     BOOL _proceed;
@@ -28,7 +29,7 @@
 
 - (void)loadView {
     UIView *view = [UIView new];
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = [UIColor backgroundColor];
     view.frame = [self contentFrame];
 
     [self registerForKeyboardNotifications];

@@ -15,6 +15,7 @@
 #import "UVCategory.h"
 #import "UVUtils.h"
 #import "UVDeflection.h"
+#import "UIColor+UVColors.h"
 
 @implementation UVSuggestion
 
@@ -90,7 +91,7 @@
     if (!self.status) {
         return [UIColor clearColor];
     } else if (!self.statusHexColor) {
-        return [UIColor blackColor];
+        return [UIColor primaryText];
     }
     return [UVUtils parseHexColor:self.statusHexColor];
 }

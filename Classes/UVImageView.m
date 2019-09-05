@@ -9,6 +9,7 @@
 #import "UVImageView.h"
 #import "UVImageCache.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UIColor+UVColors.h"
 
 @implementation UVImageView
 
@@ -20,7 +21,7 @@
     } else {
         CGContextRef ctx = UIGraphicsGetCurrentContext();
         if (ctx) {
-            CGContextSetFillColorWithColor(ctx, [UIColor colorWithRed:0.9f green:0.9f blue:0.9f alpha:1.f].CGColor);
+            CGContextSetFillColorWithColor(ctx, [UIColor reallyLightGray].CGColor);
             CGContextFillRect(ctx, self.bounds);
             CGContextFlush(ctx);
         }

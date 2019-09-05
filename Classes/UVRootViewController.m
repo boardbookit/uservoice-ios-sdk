@@ -21,6 +21,7 @@
 #import "UVPostIdeaViewController.h"
 #import "UVContactViewController.h"
 #import "UVBabayaga.h"
+#import "UIColor+UVColors.h"
 
 @implementation UVRootViewController
 
@@ -79,7 +80,7 @@
     loading.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleTopMargin;
     UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     if ([activity respondsToSelector:@selector(setColor:)]) {
-        [activity setColor:[UIColor grayColor]];
+        [activity setColor:[UIColor secondaryText]];
     } else {
         activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     }

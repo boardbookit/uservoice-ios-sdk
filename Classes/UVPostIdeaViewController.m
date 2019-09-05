@@ -17,6 +17,7 @@
 #import "UVSuggestion.h"
 #import "UVBabayaga.h"
 #import "UVTextWithFieldsView.h"
+#import "UIColor+UVColors.h"
 
 @implementation UVPostIdeaViewController {
     BOOL _proceed;
@@ -28,7 +29,7 @@
 
 - (void)loadView {
     UIView *view = [UIView new];
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = [UIColor backgroundColor];
     view.frame = [self contentFrame];
     _instantAnswerManager = [UVInstantAnswerManager new];
     _instantAnswerManager.delegate = self;
@@ -53,15 +54,15 @@
     _fieldsView.textView.placeholder = NSLocalizedStringFromTableInBundle(@"Description (optional)", @"UserVoice", [UserVoice bundle], nil);
 
     UIView *sep = [UIView new];
-    sep.backgroundColor = [UIColor colorWithRed:0.85f green:0.85f blue:0.85f alpha:1.f];
+    sep.backgroundColor = [UIColor mediumGray];
 
     UIView *bg = [UIView new];
-    bg.backgroundColor = [UIColor colorWithRed:0.937f green:0.937f blue:0.957f alpha:1.f];
+    bg.backgroundColor = [UIColor reallyLightGray];
 
     UILabel *desc = [UILabel new];
     desc.backgroundColor = [UIColor clearColor];
     desc.text = NSLocalizedStringFromTableInBundle(@"When you post an idea on our forum, others will be able to subscribe to it and make comments. When we respond to the idea, you'll get notified.", @"UserVoice", [UserVoice bundle], nil);
-    desc.textColor = [UIColor colorWithRed:0.6f green:0.6f blue:0.6f alpha:1.0f];
+    desc.textColor = [UIColor mediumGray];
     desc.numberOfLines = 0;
     desc.font = [UIFont systemFontOfSize:12];
     self.desc = desc;

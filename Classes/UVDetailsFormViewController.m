@@ -9,6 +9,7 @@
 #import "UVDetailsFormViewController.h"
 #import "UVValueSelectViewController.h"
 #import "UVStyleSheet.h"
+#import "UIColor+UVColors.h"
 
 #define LABEL 100
 #define VALUE 101
@@ -31,7 +32,7 @@
         help.frame = CGRectMake(0, 0, 0, 80);
         UILabel *label = [UILabel new];
         label.text = _helpText;
-        label.textColor = [UIColor colorWithRed:0.6f green:0.6f blue:0.6f alpha:1.0f];
+        label.textColor = [UIColor mediumGray];
         label.numberOfLines = 0;
         label.font = [UIFont systemFontOfSize:12];
         label.backgroundColor = [UIColor clearColor];
@@ -131,7 +132,7 @@
         value.textColor = [UIColor blackColor];
     } else {
         value.text = NSLocalizedStringFromTableInBundle(@"select", @"UserVoice", [UserVoice bundle], nil);
-        value.textColor = [UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.0f];
+        value.textColor = [UIColor mediumGray];
     }
 }
 

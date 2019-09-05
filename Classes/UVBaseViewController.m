@@ -19,6 +19,7 @@
 #import "UVKeyboardUtils.h"
 #import "UVUtils.h"
 #import "UVTruncatingLabel.h"
+#import "UIColor+UVColors.h"
 
 #define TITLE 20
 #define SUBSCRIBER_COUNT 21
@@ -77,7 +78,7 @@
     if (!_shade) {
         _shade = [[UIView alloc] initWithFrame:self.view.bounds];
         _shade.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-        _shade.backgroundColor = [UIColor blackColor];
+        _shade.backgroundColor = [UIColor primaryText];
         _shade.alpha = 0.5;
         [self.view addSubview:_shade];
     }
@@ -187,9 +188,9 @@
     UIView *power = [UIView new];
     power.frame = CGRectMake(0, 0, 0, 80);
     UILabel *uv = [UILabel new];
-    uv.text = NSLocalizedStringFromTableInBundle(@"Powered! by UserVoice", @"UserVoice", [UserVoice bundle], nil);
+    uv.text = NSLocalizedStringFromTableInBundle(@"Powered by UserVoice", @"UserVoice", [UserVoice bundle], nil);
     uv.font = [UIFont systemFontOfSize:13];
-    uv.textColor = [UIColor grayColor];
+    uv.textColor = [UIColor secondaryText];
     uv.backgroundColor = [UIColor clearColor];
     uv.textAlignment = NSTextAlignmentCenter;
     UILabel *version = [UILabel new];
@@ -257,12 +258,12 @@
 #pragma mark ===== helper methods for table views =====
 
 - (void)initCellForSuggestion:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     UIImageView *heart = [UVUtils imageViewWithImageNamed:@"uv_heart.png"];
     UILabel *subs = [UILabel new];
     subs.font = [UIFont systemFontOfSize:14];
-    subs.textColor = [UIColor grayColor];
+    subs.textColor = [UIColor secondaryText];
     subs.tag = SUBSCRIBER_COUNT;
     UILabel *title = [UILabel new];
     title.numberOfLines = 0;
@@ -588,7 +589,7 @@
     UILabel *label = [UILabel new];
     label.text = [NSString stringWithFormat:@"%@:", labelText];
     label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor grayColor];
+    label.textColor = [UIColor secondaryText];
     [label setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
     [self configureView:view
                subviews:NSDictionaryOfVariableBindings(field, label)

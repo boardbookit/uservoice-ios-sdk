@@ -87,7 +87,7 @@
 #pragma mark ===== UITableViewDataSource Methods =====
 
 - (void)initCellForAdd:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     cell.textLabel.text = NSLocalizedStringFromTableInBundle(@"Post an idea", @"UserVoice", [UserVoice bundle], nil);
     if (IOS7) {
         cell.textLabel.textColor = cell.textLabel.tintColor;
@@ -99,7 +99,7 @@
 }
 
 - (void)initCellForLoad:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.backgroundColor = [UIColor clearColor];

@@ -17,6 +17,7 @@
 #import "UVBabayaga.h"
 #import "UVClientConfig.h"
 #import "UVPaginationInfo.h"
+#import "UIColor+UVColors.h"
 
 #define LABEL 100
 #define TOPIC 101
@@ -80,7 +81,7 @@
 }
 
 - (void)initCellForArticle:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     UILabel *label = [UILabel new];
     label.numberOfLines = 0;
@@ -92,7 +93,7 @@
     } else {
         UILabel *topic = [UILabel new];
         topic.font = [UIFont systemFontOfSize:12];
-        topic.textColor = [UIColor grayColor];
+        topic.textColor = [UIColor secondaryText];
         topic.tag = TOPIC;
         [self configureView:cell.contentView
                    subviews:NSDictionaryOfVariableBindings(label, topic)
@@ -113,7 +114,7 @@
 }
 
 - (void)initCellForLoad:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.backgroundColor = [UIColor clearColor];

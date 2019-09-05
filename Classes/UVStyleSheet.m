@@ -7,6 +7,7 @@
 //
 
 #import "UVStyleSheet.h"
+#import "UIColor+UVColors.h"
 
 @implementation UVStyleSheet
 
@@ -15,7 +16,7 @@ static UVStyleSheet *instance;
 + (UVStyleSheet *)instance {
     if (instance == nil) {
         instance = [UVStyleSheet new];
-        instance.loadingViewBackgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.0f];
+        instance.loadingViewBackgroundColor = [UIColor reallyLightGray];
         instance.preferredStatusBarStyle = UIStatusBarStyleDefault;
         instance.navigationBarTintColor = [UINavigationBar appearance].tintColor;
         instance.navigationBarTranslucency = YES;

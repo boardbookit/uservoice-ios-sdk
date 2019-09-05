@@ -18,6 +18,7 @@
 #import "UVUtils.h"
 #import "UVSession.h"
 #import "UVClientConfig.h"
+#import "UIColor+UVColors.h"
 
 #define TITLE 20
 #define SUBSCRIBER_COUNT 21
@@ -127,7 +128,7 @@
 }
 
 - (void)initCellForSuggestion:(UITableViewCell *)cell finalCondition:(BOOL)final {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (IOS7) {
         cell.separatorInset = UIEdgeInsetsMake(0, 58, 0, 0);
@@ -136,7 +137,7 @@
     UIImageView *heart = [UVUtils imageViewWithImageNamed:@"uv_heart.png"];
     UILabel *subs = [UILabel new];
     subs.font = [UIFont systemFontOfSize:14];
-    subs.textColor = [UIColor grayColor];
+    subs.textColor = [UIColor secondaryText];
     subs.tag = SUBSCRIBER_COUNT;
     UILabel *title = [UILabel new];
     title.numberOfLines = 0;
@@ -183,7 +184,7 @@
 }
 
 - (void)initCellForArticle:(UITableViewCell *)cell finalCondition:(BOOL)final {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (IOS7) {
         cell.separatorInset = UIEdgeInsetsMake(0, 58, 0, 0);
@@ -195,7 +196,7 @@
     title.tag = TITLE;
     UILabel *section = [UILabel new];
     section.font = [UIFont systemFontOfSize:12];
-    section.textColor = [UIColor grayColor];
+    section.textColor = [UIColor secondaryText];
     section.tag = SECTION;
     NSArray *constraints = @[
         @"|-15-[icon(==28)]-15-[title]-|",

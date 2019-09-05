@@ -16,6 +16,7 @@
 #import "UVSession.h"
 #import "UVCallback.h"
 #import "UVSigninManager.h"
+#import "UIColor+UVColors.h"
 
 @implementation UVCommentViewController {
     UVTextWithFieldsView *_fieldsView;
@@ -97,7 +98,7 @@
     self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"Add a comment", @"UserVoice", [UserVoice bundle], nil);
     UIView *view = [UIView new];
     view.frame = [self contentFrame];
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = [UIColor backgroundColor];
 
     _fieldsView = [UVTextWithFieldsView new];
     _fieldsView.textView.placeholder = NSLocalizedStringFromTableInBundle(@"Write a comment...", @"UserVoice", [UserVoice bundle], nil);

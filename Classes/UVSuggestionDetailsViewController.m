@@ -22,6 +22,7 @@
 #import "UVDeflection.h"
 #import "UVCategory.h"
 #import "UVUtils.h"
+#import "UIColor+UVColors.h"
 
 #define MARGIN 15
 
@@ -168,18 +169,18 @@
     UILabel *name = [UILabel new];
     name.tag = COMMENT_NAME_TAG;
     name.font = [UIFont boldSystemFontOfSize:13];
-    name.textColor = [UIColor colorWithRed:0.19f green:0.20f blue:0.20f alpha:1.0f];
+    name.textColor = [UIColor reallyDarkGray];
 
     UILabel *date = [UILabel new];
     date.tag = COMMENT_DATE_TAG;
     date.font = [UIFont systemFontOfSize:12];
-    date.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
+    date.textColor = [UIColor mediumGray];
 
     UILabel *text = [UILabel new];
     text.tag = COMMENT_TEXT_TAG;
     text.numberOfLines = 0;
     text.font = [UIFont systemFontOfSize:13];
-    text.textColor = [UIColor colorWithRed:0.41f green:0.42f blue:0.43f alpha:1.0f];
+    text.textColor = [UIColor darkGray];
 
     NSArray *constraints = @[
         @"|-16-[avatar(==40)]-[name]",
@@ -234,7 +235,7 @@
     category.text = _suggestion.category.name ? [NSString stringWithFormat:@"%@ / %@", NSLocalizedStringFromTableInBundle(@"Feedback", @"UserVoice", [UserVoice bundle], nil), _suggestion.category.name] : NSLocalizedStringFromTableInBundle(@"Feedback", @"UserVoice", [UserVoice bundle], nil);
     category.adjustsFontSizeToFitWidth = YES;
     category.minimumScaleFactor = 0.5;
-    category.textColor = [UIColor colorWithRed:0.41f green:0.42f blue:0.43f alpha:1.0f];
+    category.textColor = [UIColor darkGray];
 
     UILabel *title = [UILabel new];
     title.font = [UIFont boldSystemFontOfSize:17];
@@ -277,7 +278,7 @@
 
     UILabel *date = [UILabel new];
     date.font = [UIFont systemFontOfSize:12];
-    date.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
+    date.textColor = [UIColor mediumGray];
     date.text = [NSDateFormatter localizedStringFromDate:_suggestion.responseCreatedAt dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
     
     if ([_suggestion.responseText length] > 0) {
@@ -286,7 +287,7 @@
 
         UVTruncatingLabel *text = [UVTruncatingLabel new];
         text.font = [UIFont systemFontOfSize:13];
-        text.textColor = [UIColor colorWithRed:0.41f green:0.42f blue:0.43f alpha:1.0f];
+        text.textColor = [UIColor darkGray];
         text.fullText = _suggestion.responseText;
         text.delegate = self;
         text.tag = ADMIN_RESPONSE;
@@ -294,7 +295,7 @@
         UILabel *admin = [UILabel new];
         admin.font = [UIFont systemFontOfSize:11];
         admin.text = _suggestion.responseUserWithTitle;
-        admin.textColor = [UIColor colorWithRed:0.69f green:0.69f blue:0.72f alpha:1.0f];
+        admin.textColor = [UIColor mediumGray];
         admin.adjustsFontSizeToFitWidth = YES;
         admin.minimumScaleFactor = 0.5;
 
@@ -452,16 +453,16 @@
     NSArray *constraints;
 
     UIView *footer = [UIView new];
-    footer.backgroundColor = [UIColor colorWithRed:0.97f green:0.97f blue:0.97f alpha:1.0f];
+    footer.backgroundColor = [UIColor reallyLightGray];
     UIView *border = [UIView new];
-    border.backgroundColor = [UIColor colorWithRed:0.85f green:0.85f blue:0.85f alpha:1.0f];
+    border.backgroundColor = [UIColor mediumGray];
     UIView *bg = [UIView new];
     bg.translatesAutoresizingMaskIntoConstraints = NO;
     bg.backgroundColor = footer.backgroundColor;
     if (_instantAnswers) {
         UILabel *people = [UILabel new];
         people.font = [UIFont systemFontOfSize:14];
-        people.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
+        people.textColor = [UIColor mediumGray];
         people.backgroundColor = [UIColor clearColor];
         _subscriberCount = people;
 
@@ -502,7 +503,7 @@
 
         UILabel *people = [UILabel new];
         people.font = [UIFont systemFontOfSize:13];
-        people.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
+        people.textColor = [UIColor mediumGray];
         people.backgroundColor = [UIColor clearColor];
         _subscriberCount = people;
 
