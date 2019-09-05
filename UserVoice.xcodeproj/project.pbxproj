@@ -312,8 +312,8 @@
 		80B5291D13A16A2F008709D2 /* UVCustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVCustomField.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* UserVoice_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserVoice_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AB94340323215D53006805E2 /* UIColor+UVColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIColor+UVColors.h"; path = "UserVoiceSDK/UIColor+UVColors.h"; sourceTree = SOURCE_ROOT; };
-		AB94340423215D53006805E2 /* UIColor+UVColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIColor+UVColors.m"; path = "UserVoiceSDK/UIColor+UVColors.m"; sourceTree = SOURCE_ROOT; };
+		AB94340323215D53006805E2 /* UIColor+UVColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+UVColors.h"; sourceTree = "<group>"; };
+		AB94340423215D53006805E2 /* UIColor+UVColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UVColors.m"; sourceTree = "<group>"; };
 		AC04F4F2109A3D4A00551F2D /* UVSuggestionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVSuggestionDetailsViewController.h; sourceTree = "<group>"; };
 		AC04F4F3109A3D4A00551F2D /* UVSuggestionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVSuggestionDetailsViewController.m; sourceTree = "<group>"; };
 		AC1B16C910D7F586002B03F7 /* UVWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVWelcomeViewController.h; sourceTree = "<group>"; };
@@ -554,12 +554,12 @@
 				D95F23DE16EFD8B1003F6850 /* UVRequestContext.m */,
 				D95F23E3172EFD2A003F6850 /* UVUtils.h */,
 				D95F23E4172EFD2A003F6850 /* UVUtils.m */,
-				AB94340323215D53006805E2 /* UIColor+UVColors.h */,
-				AB94340423215D53006805E2 /* UIColor+UVColors.m */,
 				D909DD4117CD3CAA00ECE395 /* UVDefines.h */,
 				D9E8B6A618105CC8003C7E07 /* UVInstantAnswerManager.h */,
 				D9E8B6A718105CC8003C7E07 /* UVInstantAnswerManager.m */,
 				D9FAD0E618AE7DBB00EC193B /* UVModelDelegate.h */,
+				AB94340323215D53006805E2 /* UIColor+UVColors.h */,
+				AB94340423215D53006805E2 /* UIColor+UVColors.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
